@@ -1,7 +1,7 @@
 from pyrustools.client_plus import MyPyrus
 from pyrustools.object_methods import object_by_code
 
-def comment_task_before_consideration(task_number):
+def comment_task_before_consideration(task_number): # получает на вход номер дела, достает начальную информацию о нем с сайта и заполняет задчу в пайрусе
     elem_MyPyrus = MyPyrus(login="reg+kostya@atlas-it-solutions.ru", security_key="cBDZ0tJgAIz4eO8TSXlY6laNnCPSxuiaXSyo1Rq-9pTmH2Eh9B-rIH044VRstjZmVQXvYP202ZxKQt2pTPd0SLTQD6qw00E1")
     elem_MyPyrus.initialize()
     task_getter = elem_MyPyrus.get_task(task_number)
