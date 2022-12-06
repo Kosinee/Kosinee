@@ -1,5 +1,5 @@
 def date(s):
-  return s[6:10] + '-' + s[3:5] + '-' + s[:2]
+  return f"{s[6:10]}-{s[3:5]}-{s[:2]}"
 
 def initial_field_updates_form(case, url_case):
 
