@@ -1,7 +1,7 @@
 def date(s):
   return f"{s[6:10]}-{s[3:5]}-{s[:2]}"
 
-def initial_field_updates_form(case, url_case):
+def initial_field_updates_form(case, url_case): #создает форму для функции comment_task_plus 
 
     field_updates = [{'id': 19,
                       'type': 'date',
