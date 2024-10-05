@@ -53,7 +53,7 @@ def court_case(name):
     То же, что и court_cases(), только ищет по одному имени(либо краткому, либо полному)
     Принимает, возвращает аналогично.
     """
-    url = f"https://service.api-assist.com/parser/mosgorsud_api/?key=dd48a3880956f92e995edeb40e131d13&participant={name}"
+    url = f"https://service.api-assist.com/parser/mosgorsud_api/?key=&participant={name}"
     response = requests.request("GET", url)
     all_court_cases = response.json()
     names_plaintiff = ['Мир Финансов', 'МИР Финансов', 'мир финансов', 'Мир финансов']
@@ -80,7 +80,7 @@ def court_cases(name):
 
 
 def court_case_from_url(case):
-    url = f"https://service.api-assist.com/parser/mosgorsud_api/?key=dd48a3880956f92e995edeb40e131d13&caseURL={case.Url}"
+    url = f"https://service.api-assist.com/parser/mosgorsud_api/?key=&caseURL={case.Url}"
     response = requests.request("GET", url)
     return response.json()['case']
 
